@@ -1,0 +1,24 @@
+secret: ''
+
+hosts:
+  - name: aliyun
+    host: localhost
+    port: 22
+    username: root
+    password: root
+  - name: server2
+    host: localhost
+    port: 2222
+    username: user
+    password: pass456
+
+commands:
+  - name: 获取系统信息
+    host: aliyun
+    shell: uname -a
+    descript: 获取服务器的系统信息
+  - name: 每秒输出内容
+    host: aliyun
+    shell: while true; do echo "这是每秒输出的内容"; sleep 1; done
+    descript: 查看服务器的磁盘使用情况
+    secret: 'dev'

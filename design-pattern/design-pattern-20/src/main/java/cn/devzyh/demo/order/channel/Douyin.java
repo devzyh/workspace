@@ -1,0 +1,18 @@
+package cn.devzyh.demo.order.channel;
+
+import cn.devzyh.demo.order.IPayChannel;
+
+import java.math.BigDecimal;
+
+public class Douyin implements IPayChannel {
+    @Override
+    public boolean pay(BigDecimal amount) {
+        System.out.println("抖音支付：" + amount + "元");
+        return true;
+    }
+
+    @Override
+    public BigDecimal total(BigDecimal amount) {
+        return amount.add(BigDecimal.valueOf(2L));
+    }
+}

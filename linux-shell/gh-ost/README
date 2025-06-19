@@ -1,0 +1,26 @@
+# 介绍
+* 基于gh-ost封装的多次运行脚本，版本：1.0.0
+* gh-ost官网：https://github.com/github/gh-ost
+* 脚本目前仅支持Linux AMD 64架构的操作系统
+
+# 首次运行
+1. 赋予脚本运行权限chmod+x run.sh
+2. 修改run.sh文件内的数据库相关信息
+3. 修改run.sh文件内的工作目录信息
+4. 修改运行参数确保执行成功，脚本内参数仅兼容Azure SSL链接
+5. 更多参数参考文档：https://github.com/github/gh-ost/blob/master/doc/command-line-flags.md
+
+# 执行步骤
+1. 变更SQL写入alter.sql文件
+2. 运行脚本./run.sh或者后台运行nohup ./run.sh &
+
+# 自动切换
+## 原理
+* postpone-cut-over-flag-file参数指定的文件存在时gh-ost同步数据完成后不会执行切换动作
+* 利用crontab定时执行，保持在设定的时间段内定时清理切换标识，否则创建切换标识
+## 步骤
+1. 赋予脚本运行权限chmod+x cron.sh
+2. 修改cron.sh文件内的时间段（时间小于10需要向左补一个0），在设定时间段内会执行自动切换
+3. 修改cron.sh文件内的工作目录信息
+4. 编辑crontab -e添加内容：
+    */1 * * * * /gh-ost工作目录/cron.sh > /dev/null 2>&1

@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#output {
+    height: 60vh;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow-y: auto;
+    margin-top: 20px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.status-running {
+    color: #0066cc;
+}
+
+.status-output {
+    color: #333;
+}
+
+.status-error {
+    color: #cc0000;
+}
+
+.status-completed {
+    color: #009900;
+}

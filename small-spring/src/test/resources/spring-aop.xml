@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="testService" class="cn.devzyh.smallspring.test.aop.bean.TestService"/>
+
+    <bean class="cn.devzyh.smallspring.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+
+    <bean id="beforeAdvice" class="cn.devzyh.smallspring.test.aop.bean.TestServiceBeforeAdvice"/>
+
+    <bean id="methodInterceptor" class="cn.devzyh.smallspring.aop.framework.adapter.MethodBeforeAdviceInterceptor">
+        <property name="advice" ref="beforeAdvice"/>
+    </bean>
+
+    <bean id="pointcutAdvisor" class="cn.devzyh.smallspring.aop.aspectj.AspectJExpressionPointcutAdvisor">
+        <property name="expression" value="execution(* cn.devzyh.smallspring.test.aop.bean.ITestService.*(..))"/>
+        <property name="advice" ref="methodInterceptor"/>
+    </bean>
+</beans>

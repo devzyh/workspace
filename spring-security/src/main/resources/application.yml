@@ -1,0 +1,11 @@
+server:
+  port: 7000
+
+spring:
+  profiles:
+    active: data
+  datasource:
+    url: jdbc:mysql://innerhost/demo?useSSL=false&characterEncoding=UTF-8
+    username: demo
+    password: demo
+    driverClassName: com.mysql.cj.jdbc.Driver

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.devzyh.demo</groupId>
+    <artifactId>design-pattern</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>design-pattern-01</module>
+        <module>design-pattern-02</module>
+        <module>design-pattern-03</module>
+        <module>design-pattern-04</module>
+        <module>design-pattern-05</module>
+        <module>design-pattern-06</module>
+        <module>design-pattern-07</module>
+        <module>design-pattern-08</module>
+        <module>design-pattern-09</module>
+        <module>design-pattern-10</module>
+        <module>design-pattern-11</module>
+        <module>design-pattern-12</module>
+        <module>design-pattern-13</module>
+        <module>design-pattern-14</module>
+        <module>design-pattern-15</module>
+        <module>design-pattern-16</module>
+        <module>design-pattern-17</module>
+        <module>design-pattern-18</module>
+        <module>design-pattern-19</module>
+        <module>design-pattern-20</module>
+        <module>design-pattern-21</module>
+        <module>design-pattern-22</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>2.0.22</version>
+        </dependency>
+    </dependencies>
+
+</project>
