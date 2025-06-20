@@ -72,7 +72,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <!-- 主类的位置，例如上图文件，主类配置应为： -->
+                                    <!-- 主类的位置 -->
                                     <mainClass>cn.devzyh.demo.ConsumerApplication</mainClass>
                                 </transformer>
                             </transformers>
