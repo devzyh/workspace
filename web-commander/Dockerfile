@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 5000
 
 # 启动应用
-CMD ["gunicorn","-b","0.0.0.0:5000", "app:app"]
+CMD ["gunicorn","-b","0.0.0.0:5000", "run:app"]

@@ -21,7 +21,7 @@ def handle_ssh_command(client_id, command):
 
         # 执行命令
         send_message_to_client({"status": "running", "message": f"正在执行命令: {command.name}"}, client_id)
-        stdin, stdout, stderr = ssh_client.exec_command(command.shell, bufsize=1)
+        stdin, stdout, stderr = ssh_client.exec_command(command.shell, bufsize=1, timeout=86400)
 
         # 实时读取并推送标准输出
         for line in stdout:
