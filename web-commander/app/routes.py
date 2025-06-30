@@ -39,7 +39,7 @@ def execute_command():
     if client_id is None or command is None:
         return json.dumps({"error": "请求参数错误"})
 
-    if secret != command.secret:
+    if command.secret is not None and len(str(command.secret)) != 0 and str(secret) != str(command.secret):
         return json.dumps({"error": "执行密钥错误"})
 
     execute_ssh_command(client_id, command)

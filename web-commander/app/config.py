@@ -59,7 +59,7 @@ def parse_config(yaml_config):
             shell=cmd_data.get('shell', ''),
             secret=cmd_data.get('secret', '')
         )
-        if len(command.secret) == 0:
+        if command.secret is None or len(str(command.secret)) == 0:
             command.secret = secret
         commands.append(command)
 
