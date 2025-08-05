@@ -1,4 +1,0 @@
-flask==3.1.1
-pyyaml==6.0.2
-paramiko==3.5.1
-gunicorn==23.0.0

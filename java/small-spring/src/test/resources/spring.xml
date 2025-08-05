@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <bean id="userDao" class="cn.devzyh.smallspring.test.testbean.UserDao"/>
+
+    <bean id="userService" class="cn.devzyh.smallspring.test.testbean.UserService">
+        <property name="name" value="李四"/>
+        <property name="userDao" ref="userDao"/>
+    </bean>
+
+    <bean class="cn.devzyh.smallspring.test.processor.MyBeanFactoryPostProcessor"/>
+    <bean class="cn.devzyh.smallspring.test.processor.MyBeanPostProcessor"/>
+
+</beans>

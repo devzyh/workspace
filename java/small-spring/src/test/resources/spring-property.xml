@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <bean class="cn.devzyh.smallspring.beans.factory.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:test.properties"/>
+    </bean>
+
+    <bean id="testService" class="cn.devzyh.smallspring.test.annotation.bean.TestService">
+        <property name="word" value="${word}"/>
+    </bean>
+
+</beans>

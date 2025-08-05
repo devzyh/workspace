@@ -1,0 +1,50 @@
+# Python 虚拟环境
+venv/
+env/
+.venv/
+.conda/
+
+# 缓存文件和目录
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+
+# 日志文件
+*.log
+logs/
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 配置文件（建议使用配置模板并忽略具体配置）
+instance/
+
+# Flask 会话文件
+.flask_session/
+
+# 开发环境文件
+.env
+.venv/
+.coverage
+coverage.xml
+pytest_cache/
+htmlcov/
+
+# 打包相关
+dist/
+build/
+*.whl
+*.egg-info/
+
+# 编辑器/IDE 配置
+.idea/           # IntelliJ IDEA
+.vscode/         # Visual Studio Code
+*.swp            # Vim
+*.bak            # Vim/Emacs
+*.DS_Store       # macOS
+thumbs.db        # Windows
+Desktop.ini      # Windows

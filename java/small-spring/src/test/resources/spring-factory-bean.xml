@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="proxyNameDao" class="cn.devzyh.smallspring.test.factorybean.ProxyFactoryBean"/>
+
+    <bean id="nameService" class="cn.devzyh.smallspring.test.factorybean.NameService" scope="prototype">
+        <property name="nameDao" ref="proxyNameDao"/>
+        <property name="area" value="中国"/>
+    </bean>
+
+</beans>
